@@ -306,7 +306,7 @@
     </div>
 
     <script>
-        // Smooth scrolling and animations
+        
         document.addEventListener('DOMContentLoaded', function() {
             const elements = document.querySelectorAll('.fade-in');
             elements.forEach((el, index) => {
@@ -316,7 +316,7 @@
             });
         });
 
-        // Video file handling
+        // Video 
         document.getElementById('videoFile').addEventListener('change', function(e) {
             const file = e.target.files[0];
             if (file) {
@@ -328,14 +328,14 @@
                 placeholder.style.display = 'none';
                 video.style.display = 'block';
                 
-                // Auto-play the video once loaded
+             
                 video.addEventListener('loadedmetadata', function() {
                     video.play().catch(e => console.log('Auto-play prevented by browser'));
                 });
             }
         });
 
-        // Video control functions
+        
         const video = document.getElementById('demoVideo');
 
         function playPause() {
@@ -360,10 +360,9 @@
             }
         }
 
-        // Add click to play/pause functionality
+        
         video.addEventListener('click', playPause);
 
-        // Keyboard shortcuts
         document.addEventListener('keydown', function(e) {
             if (e.code === 'Space' && e.target === document.body) {
                 e.preventDefault();
@@ -371,7 +370,7 @@
             }
         });
 
-        // Add some interactive hover effects
+    
         document.querySelectorAll('.tech-tag').forEach(tag => {
             tag.addEventListener('mouseenter', function() {
                 this.style.transform = 'scale(1.05)';
@@ -382,7 +381,7 @@
             });
         });
 
-        // Smooth transitions for buttons
+       
         document.querySelectorAll('.control-btn, .file-label').forEach(btn => {
             btn.style.transition = 'all 0.3s ease';
         });
